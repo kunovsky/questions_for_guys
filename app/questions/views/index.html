@@ -9,6 +9,9 @@
   
   <div class="questions-container">
     <div class="current-count"> {{current}} of {{totalQuestions}} </div>
+    <label class="item item-input item-select">
+      <select ng-change="changeSelection()" ng-model="selectedGrouping" ng-options="type.name for type in selectOptions"></select>
+    </label>
     <div class="padding question-content"> {{currentQuestion()}} </div>
 
       <div class="navigation-buttons">
@@ -22,8 +25,7 @@
       </div>
 
     <div class="reset">
-      <a class="reset-link" href="#" ng-click="resetQuestions()"> Reset Questions</a>
+      <a class="reset-link" href="#" ng-click="resetQuestions()" ng-if="current != 1"> Reset Questions</a>
     </div>
-
   </div>
 </div>

@@ -58,6 +58,11 @@
   color: #FFF;
 }
 
+.select-container {
+  background-color: #D12E41;
+  color: #FFF;
+}
+
 .question-content {
   margin: 40px 0px;
   text-align: center;
