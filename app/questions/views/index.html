@@ -7,21 +7,20 @@
   </super-navbar>
 
   
-  <div class="questions-container">
+  <div class="questions-container ">
     <div class="current-count"> {{current}} of {{totalQuestions}} </div>
-    <label class="item item-input item-select">
-      <select ng-change="changeSelection()" ng-model="selectedGrouping" ng-options="type.name for type in selectOptions"></select>
-    </label>
+    <div class="select-container">
+      <select class="grouping-select" ng-change="changeSelection()" ng-model="selectedGrouping" ng-options="type.name for type in selectOptions"></select>
+      <div class="select-arrow super-arrow-down-b icon-right"></div>
+    </div>
+
     <div class="padding question-content"> {{currentQuestion()}} </div>
-
       <div class="navigation-buttons">
-
         <div class="row">
           <div class="col navigation-button" ng-click="previousQuestion()"> < Previous</div>
           <div class="navigation-button__divider"></div>
           <div class="col navigation-button" ng-click="nextQuestion()">Next > </div>
         </div>
-
       </div>
 
     <div class="reset">
